@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📷 Barcode WebApp</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#007bff" />
+
+</head>
+<body>
+
+  <div class="container">
+    <!-- Scanner Page -->
+    <div id="scanner-page" class="page active">
+      <h1>📦 Barcode va QR skaner</h1>
+      <div id="reader-wrapper">
+        <div id="reader"></div> <!-- bu scanner joyi -->
+      </div>
+      <div id="result" class="status">📤 Kutilyapti...</div>
+      <button id="restart-btn" class="hidden">🔄 Qayta skanerlash</button>
+    </div>
+
+    <!-- Profile Page -->
+    <div id="profile-page" class="page">
+      <h1>👤 Profil</h1>
+      <div id="tg-user-info">🔄 Yuklanmoqda...</div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <button id="nav-scan" class="active">📷 Skaner</button>
+    <button id="nav-profile">👤 Profil</button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
